@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Signal7</title>
+  <meta name="description" content="Project Obelisk, Inc. DBA Signal7 Privacy Policy. Learn how we collect, use, and protect your information.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-deep: #0c0c10;
+      --bg-card: #17171e;
+      --bg-elevated: #1e1e28;
+      --border: #1e1e28;
+      --border-light: #2a2a36;
+      --text-primary: #e2e0db;
+      --text-secondary: #9a9aa6;
+      --text-muted: #6a6a76;
+      --accent: #4f8cff;
+      --accent-dim: #3366dd;
+      --accent-glow: rgba(79, 140, 255, 0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Subtle grain texture ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(12, 12, 16, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+    }
+
+    .header-tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* ── Main content ── */
+    .content-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 100px;
+    }
+
+    /* ── Title block ── */
+    .title-block {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .title-block h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .title-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .title-meta span {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .title-meta .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid rgba(79, 140, 255, 0.15);
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+      position: relative;
+      padding-left: 16px;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 3px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-dim));
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+
+    /* ── Paragraphs ── */
+    p {
+      margin-bottom: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* ── Lists ── */
+    ul, ol {
+      margin: 12px 0 16px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul > li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    ul > li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+
+    /* Nested lists */
+    ul ul {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    ul ul > li::before {
+      width: 4px;
+      height: 4px;
+      background: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    /* Sub-items with dash style */
+    .dash-list > li::before {
+      content: '—';
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: none;
+      opacity: 1;
+      color: var(--text-muted);
+      font-size: 13px;
+      top: 0;
+      left: 0;
+    }
+
+    .dash-list > li {
+      padding-left: 24px;
+    }
+
+    /* Sub-sub items */
+    .circle-list > li::before {
+      content: '○';
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: none;
+      opacity: 0.5;
+      color: var(--text-muted);
+      font-size: 10px;
+      top: 3px;
+      left: 4px;
+    }
+
+    /* ── Strong / Bold text ── */
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #6ba3ff;
+      text-decoration: underline;
+    }
+
+    /* ── Info card (for contact section) ── */
+    .info-card {
+      margin-top: 20px;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .info-card p {
+      margin-bottom: 8px;
+    }
+
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Table of contents ── */
+    .toc {
+      margin: 24px 0 40px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      counter-reset: toc-counter;
+      padding-left: 0;
+    }
+
+    .toc ol li {
+      counter-increment: toc-counter;
+      padding: 5px 0;
+    }
+
+    .toc ol li a {
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      transition: color 0.2s;
+    }
+
+    .toc ol li a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      min-width: 18px;
+    }
+
+    .toc ol li a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center;
+    }
+
+    .site-footer p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .header-inner {
+        padding: 14px 20px;
+      }
+
+      .content-wrap {
+        padding: 36px 20px 80px;
+      }
+
+      .title-block h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 17px;
+        margin-top: 36px;
+      }
+
+      .toc {
+        padding: 18px 20px;
+      }
+
+      .header-tag {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://signal7.ai" class="logo">
+        <div class="logo-mark">S7</div>
+        <span class="logo-text">Signal7</span>
+      </a>
+      <span class="header-tag">Privacy Policy</span>
+    </div>
+  </header>
+
+  <main class="content-wrap">
+
+    <div class="title-block">
+      <h1>Privacy Policy</h1>
+      <div class="title-meta">
+        <span>Project Obelisk, Inc. DBA Signal7</span>
+        <span class="badge">Last Updated: March 13, 2026</span>
+      </div>
+    </div>
+
+    <nav class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#personal-information">Personal Information</a></li>
+        <li><a href="#collection">Collection of Personal Information</a></li>
+        <li><a href="#use">Use of Personal Information</a></li>
+        <li><a href="#disclosure">Disclosure of Personal Information</a></li>
+        <li><a href="#other-uses">Other Uses and Disclosures</a></li>
+        <li><a href="#auto-collected">Information Collected Automatically</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#rights">Your Rights and Choices</a></li>
+        <li><a href="#jurisdiction">Jurisdiction and Cross-Border Transfer</a></li>
+        <li><a href="#sensitive">Sensitive Information</a></li>
+        <li><a href="#payment">Third-Party Payment Service</a></li>
+        <li><a href="#updates">Updates to This Privacy Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <p>Project Obelisk, Inc. DBA Signal7 ("we," "us," or "our") wants you to be familiar with how we collect, use, and disclose information. This Privacy Policy describes our practices in connection with information that we collect through:</p>
+
+    <ul>
+      <li>Website(s) operated by us from which you are accessing this Privacy Policy, including <a href="https://signal7.ai">Signal7.ai</a>;</li>
+      <li>Project Obelisk Chrome Extension (the "Extension"), a browser extension available through the Chrome Web Store that reads webpage content, records user activity, stores data, and communicates with our servers;</li>
+      <li>HTML-formatted email messages that we send to you</li>
+    </ul>
+
+    <p>Collectively, we refer to the website(s), the Extension, social media pages, and emails as the "<strong>Services</strong>."</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="personal-information">Personal Information</h2>
+
+    <p>"<strong>Personal Information</strong>" is information that identifies you as an individual or relates to an identifiable individual. We collect Personal Information through or in connection with the Services, such as:</p>
+
+    <ul>
+      <li>Name</li>
+      <li>Postal address</li>
+      <li>Telephone number</li>
+      <li>Email address</li>
+      <li>IP address (we may also derive your approximate location from your IP address)</li>
+      <li>Payment information</li>
+      <li>Social media account ID</li>
+      <li>Browsing activity (URLs, page titles, and content of web pages where the Extension is active)</li>
+      <li>User activity data (actions you take within the Extension and on pages where it is active, including feature activations, clicks, and timestamps)</li>
+      <li>Extension sync data (preferences, settings, and cached data stored via Chrome's local and sync storage APIs, and, where cloud sync is enabled, on our servers)</li>
+    </ul>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="collection">Collection of Personal Information</h2>
+
+    <p>We and our service providers collect Personal Information in a variety of ways, including:</p>
+
+    <ul>
+      <li>
+        <strong>Through the Services.</strong>
+        <ul class="dash-list">
+          <li>We collect Personal Information through the Services, including when you install the Extension, create an account, use Extension features, or contact customer support.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>From Other Sources.</strong>
+        <ul class="dash-list">
+          <li>We receive your Personal Information from other sources, such as publicly available databases.</li>
+          <li>If you connect your social media account to your Services account, you will share certain Personal Information from your social media account with us, including your name, email address, photo, connections, and any other information that may be accessible to us when you connect your accounts.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>We need to collect Personal Information in order to provide the requested Services to you. If you do not provide the information requested, we may not be able to provide the Services. If you disclose any Personal Information relating to other people to us or to our service providers in connection with the Services, you represent that you have the authority to do so and to permit us to use the information in accordance with this Privacy Policy.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="use">Use of Personal Information</h2>
+
+    <p>We and our service providers use Personal Information for the following purposes:</p>
+
+    <ul>
+      <li>
+        <strong>Providing the functionality of the Services and fulfilling your requests.</strong>
+        <ul class="dash-list">
+          <li>To provide the Services' functionality to you, such as arranging access to your account.</li>
+          <li>To complete your transactions, process cancellations, returns, and exchanges, and verify your information.</li>
+          <li>To provide you with benefits, promotions, and customer service.</li>
+          <li>To respond to your inquiries and fulfill your requests.
+            <ul class="circle-list">
+              <li>To read webpage content and record user activity on pages where the Extension is active, as necessary to deliver the Extension's core functionality.</li>
+            </ul>
+          </li>
+          <li>To send administrative information to you, such as changes to our terms, conditions, and policies.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Providing you with our newsletter and/or other marketing materials and facilitating social sharing.</strong>
+        <ul class="dash-list">
+          <li>To send you marketing related emails.</li>
+          <li>To facilitate social sharing functionality that you choose to use.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Analyzing Personal Information for business reporting and providing personalized services.</strong>
+        <ul class="dash-list">
+          <li>To analyze use of the Services.</li>
+          <li>To better understand your interests and preferences, so that we can personalize our interactions with you.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Allowing you to participate in sweepstakes, contests, or other promotions.</strong>
+        <ul class="dash-list">
+          <li>We may offer you the opportunity to participate in a sweepstakes, contest, or other promotion. Some of these promotions have rules with information about how we will use and disclose your Personal Information. Please read any such rules before choosing to participate.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Aggregating and/or anonymizing Personal Information.</strong>
+        <ul class="dash-list">
+          <li>We may aggregate and/or anonymize Personal Information so that it will no longer be considered Personal Information. We do so to generate other data for our use, which we may use and disclose for any purpose, as it no longer identifies you or any other individual.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Accomplishing our business purposes.</strong>
+        <ul class="dash-list">
+          <li>For audits, to verify that our internal processes function as intended and to address legal, regulatory, or contractual requirements;</li>
+          <li>For fraud prevention and security monitoring purposes, including to detect and prevent cyberattacks or attempts to commit identity theft;</li>
+          <li>For developing new products and services;</li>
+          <li>For enhancing, improving, repairing, maintaining, or modifying our current products and services, as well as undertaking quality and safety assurance measures;</li>
+          <li>For identifying usage trends, for example, understanding which parts of our Services are of most interest to users;</li>
+          <li>For determining the effectiveness of our promotional campaigns; and</li>
+          <li>For operating and expanding our legitimate business activities.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="disclosure">Disclosure of Personal Information</h2>
+
+    <p>We disclose Personal Information:</p>
+
+    <ul>
+      <li>
+        <strong>To our service providers, to facilitate services they provide to us.</strong>
+        <ul class="dash-list">
+          <li>These can include providers of such services as website hosting, cloud infrastructure, data analysis, error tracking, payment processing, order fulfillment, fraud prevention, information technology and related infrastructure provision, customer service, email delivery, and auditing. The Extension communicates with our external servers to deliver its core functionality; this communication may involve transmission of browsing activity and user activity data as described in this Privacy Policy.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>By using the Services, you may elect to disclose Personal Information.</strong>
+        <ul class="dash-list">
+          <li>On message boards, chat, profile pages, blogs, and other services to which you are able to post information and content. Any information you post or disclose through these services may be available to other users and the general public.</li>
+          <li>Through your social sharing activity. When you connect your Services account to your social media account, you will share information with your friends associated with your social media account, with other users, and with your social media account provider. By doing so, you authorize us to facilitate this sharing, and you understand that the use of shared information will be governed by the social media provider's privacy policy.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="other-uses">Other Uses and Disclosures</h2>
+
+    <p>We may also use and disclose Personal Information as we believe to be necessary or appropriate: (a) to comply with applicable law, to respond to warrants pertaining to active investigations, and to fulfil other legal obligations; (b) to enforce our terms and conditions; and (c) to protect our rights, privacy, safety, or property, and/or that of you or others. We may use, disclose, or transfer Personal Information to a third party in connection with any proposed or actual reorganization, bankruptcy, merger, sale, joint venture, assignment, transfer, or other disposition of all or any portion of our assets or stock.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="auto-collected">Information Collected Automatically</h2>
+
+    <p>We and our service providers may collect information automatically in a variety of ways, including:</p>
+
+    <ul>
+      <li>
+        <strong>Your browser or device.</strong>
+        <ul class="dash-list">
+          <li>Certain information is collected by most browsers or automatically through your device, such as your Media Access Control (MAC) address, computer type (Windows or Mac), screen resolution, operating system name and version, device manufacturer and model, language, and Internet browser type and version. We use this information to ensure that the Services function properly.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Your use of the Extension.</strong>
+        <ul class="dash-list">
+          <li>When you install and use the Extension, we and our service providers collect usage data, such as the date and time the Extension accesses our servers, features activated, pages visited where the Extension is active, and diagnostic information. We use this information to understand how the Extension is used and to improve it.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Cookies.</strong>
+        <ul class="dash-list">
+          <li>Cookies are pieces of information stored directly on your computer. Cookies allow us to collect such information as browser type, time spent on the Services, pages visited, language preferences, and traffic data. We use the information for security purposes, to facilitate navigation, to display information more effectively, and to personalize your experience. We also gather statistical information about use of the Services in order to continually improve their design and functionality, understand how they are used, and assist us with resolving questions regarding them. We do not currently respond to browser do-not-track signals. If you do not want information collected through the use of cookies, most browsers allow you to automatically decline cookies or be given the choice of declining or accepting particular cookies from a particular website. You may also wish to refer to <a href="http://www.allaboutcookies.org/manage-cookies/index.html">allaboutcookies.org</a>. If, however, you do not accept cookies, you may experience some inconvenience in your use of the Services.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Chrome Extension Storage.</strong> The Extension uses Chrome's local storage and sync storage APIs to store your preferences, settings, and cached data on your device and, if sync is enabled, across your signed-in Chrome browsers. If cloud features are enabled, your settings and user-generated content may also be transmitted to and stored on our servers.
+      </li>
+      <li>
+        <strong>Pixel tags and other similar technologies.</strong>
+        <ul class="dash-list">
+          <li><strong>Pixel tags.</strong> We may use pixel tags (also known as web beacons and clear GIFs) to, among other things, track the actions of users of the Services (including email recipients), measure the success of our marketing campaigns, and compile statistics about use of the Services and response rates.</li>
+          <li><strong>Analytics.</strong> We use analytics services, such as Google Analytics, which use cookies and similar technologies to collect and analyze information about use of the Services and report on activities and trends. These services may also collect information regarding the use of other websites, apps, and online services. You can learn about Google's practices by going to <a href="https://www.google.com/policies/privacy/partners/">google.com/policies/privacy/partners/</a> and exercise the opt-out provided by Google by downloading the Google Analytics opt-out browser add-on, available at <a href="https://tools.google.com/dlpage/gaoptout">tools.google.com/dlpage/gaoptout</a>.</li>
+          <li><strong>Invisible reCAPTCHA.</strong> We use Google's invisible reCAPTCHA application on our Services in order to protect against spam and other automated abuse. The reCAPTCHA tool may make use of cookies, as well as such other information as IP address, date, time, language, screen size and resolution, and mouse movements. The use of the reCAPTCHA tool and information collected through it are subject to Google's privacy policy, available at <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> and Google's terms of service, available at <a href="https://policies.google.com/terms?hl=en">policies.google.com/terms</a>.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Physical Location.</strong>
+        <ul class="dash-list">
+          <li>We may collect the approximate physical location of your device by, for example, using satellite, cell phone tower, or Wi-Fi signals. We may use your device's physical location to provide you with personalized location-based services and content. In some instances, you may be permitted to allow or deny such use of your device's location, but, if you do, we may not be able to provide you with the applicable personalized services and content.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Uses and Disclosures of Information Collected Automatically</h3>
+
+    <p>If we are required to treat such information collected automatically as Personal Information under applicable law, we may use and disclose it for the purposes for which we use and disclose Personal Information, as detailed in this Privacy Policy. In some instances, we may combine information collected automatically with Personal Information. If we do, we will treat the combined information as Personal Information so long as it is combined.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="security">Security</h2>
+
+    <p>We seek to use reasonable organizational, technical, and administrative measures to protect Personal Information within our organization. Unfortunately, no data transmission or storage system can be guaranteed to be 100% secure. If you have reason to believe that your interaction with us is no longer secure, please immediately notify us in accordance with the "Contact Us" section below.</p>
+
+    <p>In the event of a data breach that is reasonably likely to result in harm to you, we will notify you in accordance with applicable law.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="retention">Data Retention</h2>
+
+    <p>We retain Personal Information for as long as your account is active or as needed to provide you with the Services. We also retain Personal Information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
+
+    <p>Browsing activity and user activity data collected through the Extension are retained for no longer than 36 months from the date of collection, unless a longer period is required by law or necessary to resolve a dispute. Extension settings and preferences are retained until you delete your account or request deletion. Aggregated and de-identified data derived from usage information may be retained indefinitely.</p>
+
+    <p>You may request deletion of your Personal Information at any time by contacting us at <a href="mailto:privacy@signal7.ai">privacy@signal7.ai</a>. We will honor deletion requests within 30 days except where retention is required by law or for legitimate business purposes such as ongoing dispute resolution.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="third-party">Third-Party Services</h2>
+
+    <p>This Privacy Policy does not address, and we are not responsible for, the privacy, information, or other practices of any third parties, including any third party operating a website or service to which the Services link. The inclusion of a link on the Services does not imply our endorsement of the linked site or service.</p>
+
+    <p>In addition, we are not responsible for the information collection, use, disclosure, or security policies or practices of other organizations, such as Facebook, Twitter, Instagram, YouTube, Pinterest, LinkedIn, Apple, Google, Microsoft, RIM, or any other app developer, app provider, social media platform, operating system provider, wireless service provider, or device manufacturer, including with respect to any Personal Information you disclose to other organizations through or in connection with our apps or social media pages. In particular, the Extension is distributed through the Google Chrome Web Store and your installation and use of the Extension is subject to Google's policies, including the Chrome Web Store Developer Program Policies available at <a href="https://developer.chrome.com/docs/webstore/program-policies/">developer.chrome.com/docs/webstore/program-policies/</a>. Google's privacy practices are governed by Google's Privacy Policy, available at <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+    <p>The Extension is not directed to individuals under the age of thirteen (13), and we do not knowingly collect Personal Information from individuals under 13. If we learn that we have collected Personal Information from a child under 13, we will promptly delete such information.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="rights">Your Rights and Choices</h2>
+
+    <p><strong>Account Information.</strong> You may update or correct information associated with your account by contacting us. You may request deletion of your account at any time by emailing <a href="mailto:privacy@signal7.ai">privacy@signal7.ai</a>; note that we may retain certain information as required by law or for legitimate business purposes.</p>
+
+    <p><strong>Uninstalling the Extension.</strong> You may stop all data collection by the Extension by uninstalling it using the standard Chrome browser process. Uninstalling the Extension does not automatically delete Personal Information already stored on our servers; please contact us to request deletion.</p>
+
+    <p><strong>Communications.</strong> You may opt out of receiving marketing communications from us by following the unsubscribe instructions in any promotional email or by contacting us directly. We may still send you service-related communications, such as notices about your account or changes to our terms and policies.</p>
+
+    <p><strong>California Residents (CCPA/CPRA).</strong> If you are a California resident, you have the right to: (a) know what categories and specific pieces of Personal Information we collect, use, disclose, and sell about you; (b) request deletion of your Personal Information, subject to certain exceptions; (c) opt out of the sale of your Personal Information (we do not sell Personal Information); (d) correct inaccurate Personal Information; and (e) not be discriminated against for exercising any of these rights. Categories of Personal Information we collect include identifiers (e.g., name, email address, IP address), internet or network activity information (e.g., browsing history and Extension usage data), and commercial information (if applicable). To submit a request, contact us at <a href="mailto:privacy@signal7.ai">privacy@signal7.ai</a> with "California Privacy Request" in the subject line. We will verify your identity before processing your request and respond within 45 days.</p>
+
+    <p><strong>Other U.S. State Residents.</strong> Residents of states with comprehensive consumer privacy laws (including Virginia, Colorado, Connecticut, Texas, Oregon, Montana, and Utah, among others) may have additional rights, including rights to access, correct, delete, and port their Personal Information, and to opt out of certain processing activities. To exercise any applicable rights, contact us at <a href="mailto:privacy@signal7.ai">privacy@signal7.ai</a>.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="jurisdiction">Jurisdiction and Cross-Border Transfer</h2>
+
+    <p>We are located in the United States. We may store and process your Personal Information in any country where we have facilities or in which we engage service providers. By using the Services, you understand that your information will be transferred to countries outside of your country of residence, including the United States, which may have data protection rules that are different from those of your country.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="sensitive">Sensitive Information</h2>
+
+    <p>Unless we request it, we ask that you not send us, and you not disclose, any sensitive Personal Information (e.g., Social Security numbers, information related to racial or ethnic origin, political opinions, religion or other beliefs, health, biometrics or genetic characteristics, or criminal background) on or through the Services or otherwise to us.</p>
+
+    <p>Please note, however, that because the Extension operates by reading the content of web pages you visit, it may incidentally process sensitive Personal Information that appears on third-party websites (for example, health information on a medical website or financial information on a banking website). We do not intentionally collect such information, do not use it for any purpose beyond delivering the Extension's stated functionality, and do not sell or share it with third parties except as described in this Privacy Policy.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="payment">Third-Party Payment Service</h2>
+
+    <p>The Services may provide functionality allowing you to make payments using a third-party payment service with which you have created your own account. When you use such a service to make a payment to us, your Personal Information will be collected by such third party and not by us and will be subject to the third party's privacy policy, rather than this Privacy Policy. We have no control over, and are not responsible for, any such third party's collection, use, or disclosure of your Personal Information.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="updates">Updates to This Privacy Policy</h2>
+
+    <p>Any changes will become effective when we post the revised Privacy Policy on the Services. If we make material changes to this Privacy Policy — in particular, changes that affect our collection or use of browsing history or user activity data — we will provide you with additional notice, such as a notification within the Extension or an email to the address associated with your account, prior to the changes taking effect.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="contact">Contact Us</h2>
+
+    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+
+    <div class="info-card">
+      <p><strong>Email:</strong> <a href="mailto:privacy@signal7.ai">privacy@signal7.ai</a></p>
+      <p><strong>Mail:</strong> Project Obelisk, Inc., Attn: Privacy, 326 Mira Loma Ave. Glendale, CA 91204</p>
+      <p style="color: var(--text-muted); font-size: 13px; margin-top: 12px;">Because email communications are not always secure, please do not include credit card or other sensitive information in your emails to us.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Project Obelisk, Inc. DBA Signal7. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
