@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions — Signal7</title>
+  <meta name="description" content="Project Obelisk, Inc. DBA Signal7 Terms and Conditions. Review the terms governing your use of our services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-deep: #0c0c10;
+      --bg-card: #17171e;
+      --bg-elevated: #1e1e28;
+      --border: #1e1e28;
+      --border-light: #2a2a36;
+      --text-primary: #e2e0db;
+      --text-secondary: #9a9aa6;
+      --text-muted: #6a6a76;
+      --accent: #4f8cff;
+      --accent-dim: #3366dd;
+      --accent-glow: rgba(79, 140, 255, 0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Subtle grain texture ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(12, 12, 16, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.3px;
+    }
+
+    .header-tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    /* ── Main content ── */
+    .content-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 32px 100px;
+    }
+
+    /* ── Title block ── */
+    .title-block {
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .title-block h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .title-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .title-meta span {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .title-meta .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid rgba(79, 140, 255, 0.15);
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+      position: relative;
+      padding-left: 16px;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 3px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-dim));
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+
+    /* ── Paragraphs ── */
+    p {
+      margin-bottom: 14px;
+      color: var(--text-secondary);
+    }
+
+    /* ── Lists ── */
+    ul, ol {
+      margin: 12px 0 16px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    ul > li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    ul > li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 10px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+
+    /* Nested lists */
+    ul ul {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    ul ul > li::before {
+      width: 4px;
+      height: 4px;
+      background: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    /* Sub-items with dash style */
+    .dash-list > li::before {
+      content: '—';
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: none;
+      opacity: 1;
+      color: var(--text-muted);
+      font-size: 13px;
+      top: 0;
+      left: 0;
+    }
+
+    .dash-list > li {
+      padding-left: 24px;
+    }
+
+    /* ── Strong / Bold text ── */
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* ── Links ── */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #6ba3ff;
+      text-decoration: underline;
+    }
+
+    /* ── Info card (for contact section) ── */
+    .info-card {
+      margin-top: 20px;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .info-card p {
+      margin-bottom: 8px;
+    }
+
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Table of contents ── */
+    .toc {
+      margin: 24px 0 40px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      counter-reset: toc-counter;
+      padding-left: 0;
+    }
+
+    .toc ol li {
+      counter-increment: toc-counter;
+      padding: 5px 0;
+    }
+
+    .toc ol li a {
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      transition: color 0.2s;
+    }
+
+    .toc ol li a::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      min-width: 18px;
+    }
+
+    .toc ol li a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center;
+    }
+
+    .site-footer p {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .header-inner {
+        padding: 14px 20px;
+      }
+
+      .content-wrap {
+        padding: 36px 20px 80px;
+      }
+
+      .title-block h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 17px;
+        margin-top: 36px;
+      }
+
+      .toc {
+        padding: 18px 20px;
+      }
+
+      .header-tag {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="https://signal7.ai" class="logo">
+        <div class="logo-mark">S7</div>
+        <span class="logo-text">Signal7</span>
+      </a>
+      <span class="header-tag">Terms &amp; Conditions</span>
+    </div>
+  </header>
+
+  <main class="content-wrap">
+
+    <div class="title-block">
+      <h1>Terms and Conditions</h1>
+      <div class="title-meta">
+        <span>Project Obelisk, Inc. DBA Signal7</span>
+        <span class="badge">Last Updated: March 30, 2026</span>
+      </div>
+    </div>
+
+    <nav class="toc">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#acceptance">Acceptance of Terms</a></li>
+        <li><a href="#services">Description of Services</a></li>
+        <li><a href="#accounts">Accounts and Registration</a></li>
+        <li><a href="#sms">SMS and Messaging Terms</a></li>
+        <li><a href="#acceptable-use">Acceptable Use</a></li>
+        <li><a href="#intellectual-property">Intellectual Property</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#disclaimers">Disclaimers</a></li>
+        <li><a href="#limitation">Limitation of Liability</a></li>
+        <li><a href="#indemnification">Indemnification</a></li>
+        <li><a href="#termination">Termination</a></li>
+        <li><a href="#governing-law">Governing Law</a></li>
+        <li><a href="#changes">Changes to These Terms</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <p>Please read these Terms and Conditions ("Terms") carefully before using any services provided by Project Obelisk, Inc. DBA Signal7 ("Signal7," "we," "us," or "our"). By accessing or using our website, browser extension, SMS messaging services, or any other services we offer (collectively, the "Services"), you agree to be bound by these Terms. If you do not agree, do not use the Services.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="acceptance">Acceptance of Terms</h2>
+
+    <p>By creating an account, installing our browser extension, opting in to receive SMS messages, or otherwise accessing or using the Services, you acknowledge that you have read, understood, and agree to be bound by these Terms, as well as our <a href="/privacy/">Privacy Policy</a>, which is incorporated herein by reference.</p>
+
+    <p>If you are using the Services on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="services">Description of Services</h2>
+
+    <p>Signal7 provides a platform that includes, but is not limited to:</p>
+
+    <ul>
+      <li>A website at <a href="https://signal7.ai">Signal7.ai</a></li>
+      <li>The Project Obelisk Chrome Extension (the "Extension"), a browser extension available through the Chrome Web Store</li>
+      <li>SMS and text messaging services for account notifications and communications</li>
+      <li>Related tools, APIs, and services</li>
+    </ul>
+
+    <p>We reserve the right to modify, suspend, or discontinue any part of the Services at any time, with or without notice.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="accounts">Accounts and Registration</h2>
+
+    <p>To access certain features of the Services, you may be required to create an account. You agree to:</p>
+
+    <ul>
+      <li>Provide accurate, current, and complete information during registration</li>
+      <li>Maintain the security of your account credentials</li>
+      <li>Promptly update your account information if it changes</li>
+      <li>Accept responsibility for all activities that occur under your account</li>
+    </ul>
+
+    <p>You must be at least 13 years of age to use the Services. If you are under 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="sms">SMS and Messaging Terms</h2>
+
+    <p>By opting in to receive SMS messages from Signal7, you agree to the following:</p>
+
+    <ul>
+      <li>
+        <strong>Consent.</strong> You consent to receive automated text messages from Signal7 at the mobile number you provide. Consent is not a condition of any purchase.
+      </li>
+      <li>
+        <strong>Message Frequency.</strong> Message frequency varies depending on account activity and notifications.
+      </li>
+      <li>
+        <strong>Message and Data Rates.</strong> Message and data rates may apply. You are responsible for any charges from your wireless carrier.
+      </li>
+      <li>
+        <strong>Opt-Out.</strong> You may opt out of receiving SMS messages at any time by replying <strong>STOP</strong> to any message. After opting out, you will receive a confirmation message and no further messages will be sent unless you opt in again.
+      </li>
+      <li>
+        <strong>Help.</strong> For assistance, reply <strong>HELP</strong> to any message, or contact us at <a href="mailto:support@signal7.ai">support@signal7.ai</a>.
+      </li>
+      <li>
+        <strong>Opt-In Data.</strong> Mobile opt-in data is not shared or sold to third parties. For more information, see the SMS Opt-In Data section of our <a href="/privacy/#sms-opt-in">Privacy Policy</a>.
+      </li>
+      <li>
+        <strong>Supported Carriers.</strong> Carriers are not liable for delayed or undelivered messages. Service availability may vary by carrier.
+      </li>
+    </ul>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="acceptable-use">Acceptable Use</h2>
+
+    <p>You agree not to use the Services to:</p>
+
+    <ul>
+      <li>Violate any applicable law, regulation, or these Terms</li>
+      <li>Infringe on the intellectual property rights of others</li>
+      <li>Transmit viruses, malware, or other harmful code</li>
+      <li>Interfere with or disrupt the integrity or performance of the Services</li>
+      <li>Attempt to gain unauthorized access to the Services or related systems</li>
+      <li>Use the Services for any fraudulent, misleading, or deceptive purpose</li>
+      <li>Harvest, collect, or store personal data of other users without their consent</li>
+      <li>Send unsolicited messages, spam, or unauthorized advertising through the Services</li>
+    </ul>
+
+    <p>We reserve the right to suspend or terminate your access to the Services if we determine, in our sole discretion, that you have violated these Terms.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="intellectual-property">Intellectual Property</h2>
+
+    <p>All content, features, and functionality of the Services — including but not limited to text, graphics, logos, icons, images, software, and the underlying code — are the property of Project Obelisk, Inc. or its licensors and are protected by United States and international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+
+    <p>You are granted a limited, non-exclusive, non-transferable, revocable license to access and use the Services for their intended purpose. You may not copy, modify, distribute, sell, or lease any part of the Services without our prior written consent.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="privacy">Privacy</h2>
+
+    <p>Your use of the Services is also governed by our <a href="/privacy/">Privacy Policy</a>, which describes how we collect, use, and protect your personal information. By using the Services, you consent to the practices described in the Privacy Policy.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="disclaimers">Disclaimers</h2>
+
+    <p>THE SERVICES ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+
+    <p>We do not warrant that the Services will be uninterrupted, error-free, or free of viruses or other harmful components. We do not guarantee the accuracy, completeness, or usefulness of any information provided through the Services.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="limitation">Limitation of Liability</h2>
+
+    <p>TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL PROJECT OBELISK, INC., ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH YOUR ACCESS TO OR USE OF (OR INABILITY TO ACCESS OR USE) THE SERVICES.</p>
+
+    <p>Our total liability to you for all claims arising out of or relating to the Services shall not exceed the amount you have paid to us in the twelve (12) months preceding the claim, or one hundred dollars ($100), whichever is greater.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="indemnification">Indemnification</h2>
+
+    <p>You agree to indemnify, defend, and hold harmless Project Obelisk, Inc. and its officers, directors, employees, agents, and affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or in any way connected with your access to or use of the Services, your violation of these Terms, or your violation of any rights of a third party.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="termination">Termination</h2>
+
+    <p>We may terminate or suspend your access to the Services at any time, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the Services will immediately cease.</p>
+
+    <p>You may terminate your account at any time by contacting us at <a href="mailto:support@signal7.ai">support@signal7.ai</a>. Termination of your account does not relieve you of any obligations incurred prior to termination.</p>
+
+    <p>All provisions of these Terms that by their nature should survive termination shall survive, including ownership provisions, warranty disclaimers, indemnity, and limitations of liability.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="governing-law">Governing Law</h2>
+
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any legal action or proceeding arising out of or relating to these Terms shall be brought exclusively in the state or federal courts located in Los Angeles County, California, and you consent to the personal jurisdiction of such courts.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="changes">Changes to These Terms</h2>
+
+    <p>We reserve the right to update or modify these Terms at any time. If we make material changes, we will provide notice by updating the "Last Updated" date at the top of this page and, where appropriate, providing additional notice such as an email or in-app notification. Your continued use of the Services after any changes constitutes your acceptance of the updated Terms.</p>
+
+    <!-- ═══════════════════════════════════════ -->
+    <h2 id="contact">Contact Us</h2>
+
+    <p>If you have any questions about these Terms, please contact us:</p>
+
+    <div class="info-card">
+      <p><strong>Email:</strong> <a href="mailto:support@signal7.ai">support@signal7.ai</a></p>
+      <p><strong>Mail:</strong> Project Obelisk, Inc., Attn: Legal, 326 Mira Loma Ave. Glendale, CA 91204</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Project Obelisk, Inc. DBA Signal7. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
